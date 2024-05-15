@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summarization Feedback</title>
+</head>
+<body>
+    <h1>Summarization Feedback</h1>
+    <form action="/summarization" method="POST" enctype="multipart/form-data">
+        <label for="file">Upload PDF File:</label>
+        <input type="file" id="file" name="file" accept=".pdf" required><br><br>
+        
+        <label for="feedback">Feedback:</label><br>
+        <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br><br>
+        
+        <label for="likes">Like:</label>
+        <span onclick="document.getElementById('likes').value='true'">👍</span>
+        <span onclick="document.getElementById('likes').value='false'">👎</span>
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
